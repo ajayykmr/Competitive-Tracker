@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+
+    android:elevation="10dp"
+    app:cardCornerRadius="10dp"
+    app:cardBackgroundColor="@color/secondary"
+
+    android:layout_marginVertical="4dp"
+
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:padding="10dp"
+        >
+
+        <TextView
+            android:id="@+id/tv_problem_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Problem Name"
+            android:textSize="18sp"
+
+            android:textAlignment="textStart"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:maxLines="1"
+            android:ellipsize="end"
+
+            android:maxWidth="225dp"
+            />
+        <TextView
+            android:id="@+id/tv_submission_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="210655444"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/tv_problem_name"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/tv_submission_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="10 minutes ago"
+            android:textSize="14sp"
+
+            app:layout_constraintTop_toBottomOf="@id/tv_submission_id"
+            app:layout_constraintStart_toStartOf="parent"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_verdict"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_problem_name"
+
+            android:textAlignment="textEnd"
+            android:maxLines="1"
+            android:textSize="16sp"
+            android:text="PASSED"
+            android:textColor="@color/red"
+            />
+
+        <TextView
+            android:id="@+id/tv_runtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="1100ms"
+            android:textSize="14sp"
+
+            app:layout_constraintEnd_toEndOf="@id/tv_verdict"
+            app:layout_constraintTop_toBottomOf="@id/tv_verdict"
+            />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time: "
+
+            app:layout_constraintTop_toTopOf="@id/tv_runtime"
+            app:layout_constraintBottom_toBottomOf="@id/tv_runtime"
+            app:layout_constraintEnd_toStartOf="@id/tv_runtime"
+
+            android:textSize="14sp"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_memory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintEnd_toEndOf="@id/tv_runtime"
+            app:layout_constraintTop_toBottomOf="@id/tv_runtime"
+
+            android:text="256MB"
+            android:textSize="14sp"
+            />
+
+        <TextView
+            android:id="@+id/memory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Memory: "
+            android:textSize="14sp"
+            app:layout_constraintTop_toTopOf="@id/tv_memory"
+            app:layout_constraintBottom_toBottomOf="@id/tv_memory"
+            app:layout_constraintEnd_toStartOf="@id/tv_memory"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

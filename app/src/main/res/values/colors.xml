@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#1E1E1E</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="red">#F10000</color>
+    <color name="primary">#4EB4E5</color>
+    <color name="secondary">#EDF9FF</color>
+
+    <color name="newbie">#808080</color>
+    <color name="pupil">#008000</color>
+    <color name="specialist">#03a89e</color>
+    <color name="expert">#0000ff</color>
+    <color name="candidate_master">#aa00aa</color>
+    <color name="master">#ff8c00</color>
+    <color name="international_master">#ff8c00</color>
+    <color name="grandmaster">#ff0000</color>
+    <color name="international_grandmaster">#ff0000</color>
+    <color name="legendary_grandmaster">#ff0000</color>
+    <color name="green">#00D100</color>
+
+</resources>

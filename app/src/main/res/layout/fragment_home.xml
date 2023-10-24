@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.HomeFragment"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        >
+
+
+        <ImageView
+            android:id="@+id/iv_profile_picture"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_user_full_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold|italic"
+            tools:text = "Ajay Kumar"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_profile_picture" />
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginTop="16dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/secondary"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_user_full_name"
+
+            >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="20dp"
+                >
+                <EditText
+
+                    android:id="@+id/tv_user_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    tools:text="qubitt"
+                    android:hint="Edit your handle here"
+                    android:textSize="28sp"
+                    android:textColor="@color/red"
+                    android:textStyle="bold"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+
+                    android:inputType="text"
+                    android:imeOptions="actionSearch"
+
+                    android:cursorVisible="false"
+                    />
+
+                <TextView
+                    app:layout_goneMarginTop="8dp"
+                    android:id="@+id/max_rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Max\nRating"
+                    android:textSize="16sp"
+                    android:textStyle="italic"
+                    android:textColor="#756262"
+
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintTop_toBottomOf="@id/tv_user_id"
+                    app:layout_constraintStart_toStartOf="parent"
+
+
+                    />
+
+                <TextView
+                    android:id="@+id/tv_max_rating_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    tools:text="3000"
+                    android:textSize="16sp"
+                    android:textColor="@color/red"
+
+                    android:textStyle="bold"
+                    android:layout_marginLeft="30dp"
+                    app:layout_constraintStart_toEndOf="@id/max_rating"
+                    app:layout_constraintTop_toTopOf="@id/max_rating" />
+
+                <TextView
+                    android:id="@+id/tv_max_rating_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    tools:text="international grandmaster"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/red"
+
+                    android:textSize="16sp"
+
+                    app:layout_constraintStart_toStartOf="@id/tv_max_rating_number"
+                    app:layout_constraintTop_toBottomOf="@id/tv_max_rating_number" />
+
+                <TextView
+
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/current_rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Current\nRating"
+                    android:textSize="16sp"
+                    android:textStyle="italic"
+                    android:textColor="#756262"
+
+                    app:layout_constraintTop_toBottomOf="@id/tv_max_rating_name"
+                    app:layout_constraintStart_toStartOf="parent"
+                    />
+                <TextView
+                    android:id="@+id/tv_current_rating_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    tools:text="3000"
+                    android:textSize="16sp"
+                    android:textColor="@color/red"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toTopOf="@id/current_rating"
+                    app:layout_constraintStart_toStartOf="@id/tv_max_rating_number"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_current_rating_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:textSize="16sp"
+                    android:textColor="@color/red"
+
+                    tools:text="international grandmaster"
+                    android:textAlignment="textStart"
+
+                    app:layout_constraintTop_toBottomOf="@id/tv_current_rating_number"
+                    app:layout_constraintStart_toStartOf="@id/tv_current_rating_number"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <ProgressBar
+            android:id="@+id/pb_progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            android:elevation="10dp"
+            android:visibility="visible"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

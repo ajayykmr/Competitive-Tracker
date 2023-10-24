@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    app:cardCornerRadius="5dp"
+    android:layout_marginVertical="4dp"
+    android:layout_marginHorizontal="4dp"
+
+    app:cardBackgroundColor="@color/secondary"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        >
+
+        <TextView
+            android:id="@+id/tv_contest_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+
+            android:text="10. "
+            android:textSize="18sp"
+            />
+        <TextView
+            android:id="@+id/tv_contest_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintTop_toTopOf="@id/tv_contest_number"
+            app:layout_constraintStart_toEndOf="@id/tv_contest_number"
+
+            android:text="Contest name"
+            android:textSize="16sp"
+
+            android:maxWidth="225dp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            />
+        <TextView
+            android:id="@+id/rank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintTop_toBottomOf="@id/tv_contest_name"
+            app:layout_constraintStart_toStartOf="@id/tv_contest_name"
+
+            android:text="Rank: "
+            android:textSize="14sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_rank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintTop_toTopOf="@id/rank"
+            app:layout_constraintBottom_toBottomOf="@id/rank"
+            app:layout_constraintStart_toEndOf="@id/rank"
+
+            android:text="2000"
+            android:textSize="14sp"
+            />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintTop_toBottomOf="@id/rank"
+            app:layout_constraintStart_toStartOf="@id/tv_contest_name"
+            android:text="Date: "
+            android:textSize="14sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_contest_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintTop_toTopOf="@id/date"
+            app:layout_constraintBottom_toBottomOf="@id/date"
+            app:layout_constraintStart_toEndOf="@id/date"
+
+            android:text="20/20/2020"
+            android:textSize="14sp"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_current_rating_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            android:text="1500"
+            android:textSize="18sp"
+            android:textColor="@color/pupil"
+            android:layout_marginBottom="30dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_delta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintTop_toBottomOf="@id/tv_current_rating_number"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="-40"
+            android:textSize="16sp"
+
+            android:textColor="@color/red"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
